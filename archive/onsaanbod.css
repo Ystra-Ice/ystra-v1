@@ -1,0 +1,387 @@
+:root {
+    --backgroundcolor: #222222;
+    --Goud: #C5B673;
+    /*--lettertype:  Verdana sans-serif;*/
+    --tekstkleur: white;
+    --font1: font-family: 'Dancing Script', cursive;
+    --font2: font-family: 'Akaya Telivigala', cursive;
+}
+
+body{
+    background-color: var(--backgroundcolor);
+    font-family: 'Akaya Telivigala', cursive;
+}
+/* Cart */
+#overview1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 10%;
+    z-index: 100;
+
+}
+#cart-list {
+    color: var(--Goud);
+}
+.update-quantity {
+    font-family: var(--font1);
+    border: 1px solid var(--Goud);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--tekstkleur);
+    background-color: var(--Goud);
+    font-size: 1.2rem;
+    padding: 3px 7px;
+    border: var(--Goud);
+    border-style: solid;
+    transition: 500ms;
+}
+.update-quantity:hover{
+    background-color: var(--tekstkleur);
+    color: var(--Goud);
+    transition: 500ms;
+    border-style: inset;
+    cursor: pointer;
+}
+
+.remove {
+    font-family: var(--font1);
+    border: 1px solid var(--Goud);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--tekstkleur);
+    background-color: var(--Goud);
+    font-size: 1.2rem;
+    padding: 3px 7px;
+    border: var(--Goud);
+    border-style: solid;
+    transition: 500ms;
+}
+.remove:hover{
+    background-color: red;
+    color: var(--tekstkleur);
+    border-style: inset;
+    border-color: red;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+/*opmaak header*/
+header{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+}
+header figure:nth-of-type(1) {
+    width: 5%;
+    min-width: 70px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    top: 0;
+    background-color: #222222;
+}
+header figure:nth-of-type(1) img{
+    width: 100%;
+    /* background-color: #222222; */
+}
+
+main figure:nth-of-type(1){
+    /* margin: 0 auto; */
+    /* margin-top: 7%; */
+    width: 100%;
+    left: 5%;
+    background-image: url(../images/pexels.jpg);
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: bottom;
+    margin-left: 2%;
+}
+h1{
+    position: absolute;
+    top: 50%;
+    margin-left: 7%;
+    color: var(--backgroundcolor);
+    font-size: 4rem;
+    font-weight: lighter;
+    font-family: 'Dancing Script', cursive;
+}
+main h1 span{
+    font-weight: bold;
+    color: var(--Goud);
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    width: 2%;
+    /* height: 50px; */
+}
+.fixedCart{
+    position: fixed;
+    top: 0;
+    right: 3.5%;
+}
+.logo{
+    position: fixed;
+    top: 11px;
+    width: 105px;
+    /* height: 85px; */
+    left: calc(50% - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.background{
+    background-color: var(--backgroundcolor);
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    border-bottom: var(--Goud);
+    border-bottom-style: solid;
+    border-width: 2px;
+  }
+.cart{
+    position: fixed;
+    top: 25px;
+    width: 75px;
+    /* height: 75px; */
+    right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* header figure:nth-of-type(1) img{
+    width: 100%;
+    margin-top: 50px;
+    min-width: 70px;
+    /* background-color: #222222; */
+  /* } */
+
+/* opmaak main */
+
+main > p >a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--Goud);
+    padding: 10px 20px;
+    transition: 500ms;
+  }
+main > p > a:hover {
+    background-color: white;
+    color: var(--Goud);
+  }
+main > p > a {
+    /* Center the buttons */
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 170px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: var(--Goud);
+    padding: 10px 20px;
+    transition: 500ms;
+  }
+main{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+main img{
+    width: 100%;
+    transition: 500ms;
+}
+
+main img:hover{
+    transform: scale(1.4);
+    transition: 500ms;
+}
+
+
+
+section div div{
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+
+}
+
+section div p{
+    text-align: center;
+    font-size: 1.2rem;
+
+    margin-top: 10px;
+}
+
+section div img{
+    width: 100%;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+section:nth-of-type(1){
+    margin-top: 0px;
+    z-index: 1;
+}
+
+table{
+    color: white
+}
+
+table td{
+    padding: 4px
+}
+
+input[type="number"] {
+    width: 30px;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--Goud);
+    margin-bottom: 75px;
+    margin-top: 100px;
+    font-family: 'Dancing Script', cursive;
+}
+h3{
+    border-bottom: 1px solid var(--Goud);
+    padding-bottom: 20px;
+    color: white;
+    font-size: 1.5rem;
+    color: var(--Goud);
+}
+p{
+    color: white;
+}
+
+.container3{
+    justify-content: center;
+}
+.container3 > div:nth-of-type(1){
+    margin-right: 140px;
+}
+
+.container4{
+    justify-content: center;
+}
+.container4 > div{
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.container5{
+    justify-content: center;
+}
+.container5 > div:nth-of-type(2){
+    margin-left: 140px;
+    margin-right: 140px;
+}
+
+.add-to-cart{
+    background-color: var(--Goud);
+    color: white;
+    padding: 10px 15px;
+    border: var(--Goud);
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 500ms;
+    float: right;
+}
+.add-to-cart:hover{
+    background-color: white;
+    color: var(--Goud);
+    border-style: inset;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.hoeveelheid{
+    padding: 10px 15px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1rem;
+    /* transition: 500ms; */
+    border-color: var(--Goud);
+    border-style: inset;
+    cursor: pointer;
+}
+.hoeveelheid:focus{
+    outline: none;
+    background-color: lightgray;
+    border-style: inset;
+    cursor: pointer;
+}
+
+
+/* opmaak footer */
+
+footer{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+
+}
+
+footer div{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1rem;
+    
+}
+footer div div{
+    width: 30%;
+    margin: 0 auto;
+}
+footer h3{
+    border-bottom: 1px solid var(--Goud);
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+footer h3:nth-of-type(4){
+    border: none;
+}
+footer p{
+    color: var(--Goud);
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+/* opmaak socials */
+
+body > figure{
+    display: flex;
+    width: 15%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+body > figure img{
+    width: 70px;
+    height: 70px;
+}
+/*Make this page also responsive for phones if to big places images beneeth each other*/
+@media screen and (max-width: 766px) {
+
+}

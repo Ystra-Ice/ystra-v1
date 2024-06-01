@@ -1,0 +1,1414 @@
+:root {
+    --backgroundcolor: #222222;
+    --scroll: #3b3b3b;
+    --scrollhover: #c5b6735d;
+    --Goud: #C5B673;
+    --Rood: #CC231E;
+    --Groen: #34A65F;
+    --Donkergroen: #0F8A5F;
+    /*--lettertype:  Verdana sans-serif;*/
+    --tekstkleur: white;
+    --font1: font-family: 'Dancing Script', cursive;
+    --font2: font-family: 'Akaya Telivigala', cursive;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+  
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll);
+    border-radius: 10px;
+    /* height: 2px; */
+}
+
+/* Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollhover);
+}
+
+body{
+    background-color: var(--backgroundcolor);
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+#winkelwagen {
+    height: 50px;
+    width: auto;
+    margin: auto 7%;
+    display: block;
+    padding-top: 5px;
+    color: var(--Goud);
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+#bestelDialog {
+    border-radius: 10px;
+    border-style: inset;
+    border-color: var(--Goud);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 350px;
+    margin: auto auto;
+    background-color: var(--backgroundcolor);
+}
+#bestelDialog[open] {
+    animation: scale-in 500ms;
+}
+#bestelDialog[closing] {
+    animation: scale-out 450ms;
+}
+#bestelDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#smaak1,
+#smaak2Dropdown {
+    float: left;
+    margin-right: 20px;
+    /* margin-bottom: 30px; */
+}
+
+/* Center the smaak horizontally */
+/* #smaak1 {
+  margin-left: 5%;
+}
+#smaak2Dropdown {
+  margin-right: 5%;
+} */
+
+
+/* Clear the float after the smaak2Dropdown */
+#smaak2Dropdown::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#smaak2Dropdown {
+    height: 30px;
+    /* padding-bottom: 30px; */
+}
+
+#bestelDialog p {
+    font-family: var(--font1);
+    font-size: 1.2rem;
+    color: var(--tekstkleur);
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.voegtoe {
+    font-family: var(--font1);
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+.product-option {
+    font-family: var(--font1);
+    font-size: 1.1rem;
+    background-color: var(--backgroundcolor);
+    border-radius: 5px;
+    border-style: inset;
+    border-color: var(--Goud);
+    border-width: 3px;
+    height: 35px;
+    color: var(--tekstkleur);
+
+    /* appearance: none; */
+    background: transparent;
+}
+.product-option:focus {
+    background-color: var(--backgroundcolor);
+    /* color: var(--tekstkleur); */
+    outline: none;
+}
+.product-option:hover {
+    /* background-color: var(--Goud); */
+    /* color: var(--tekstkleur); */
+    cursor: pointer;
+}
+
+/* Dialog scale-in */
+@keyframes scale-in {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Dialog scale-out */
+@keyframes scale-out {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+/* Dialog fade-in */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Dialog fade-out */
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Dialog slide-in */
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Dialog slide-out */
+@keyframes slide-out {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(120%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(120%);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes burn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }    
+}
+
+#taart1 {
+    height: 300px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+    padding-top: 32px;
+}
+#taart1:hover {
+    transform: scale(1);
+}
+
+#taart2 {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+    padding-top: 5px;
+}
+#taart2:hover {
+    transform: scale(1);
+}
+
+#taart3 {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+#taart3:hover {
+    transform: scale(1);
+}
+
+#taart4 {
+    height: 300px;
+    width: auto;
+    margin: auto auto;
+    margin-top: 15px;
+    display: block;
+    padding-top: 15px;
+    padding-left: 5px;
+}
+#taart4:hover {
+    transform: scale(1);
+}
+
+#taart5 {
+    height: 275px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+    padding-top: 55px;
+}
+#taart5:hover {
+    transform: scale(1);
+}
+
+#taart6 {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+    padding-top: 20px;
+}
+#taart6:hover {
+    transform: scale(1);
+}
+
+#taart7 {
+    height: 325px;
+    width: auto;
+    margin: auto auto;
+    display: block;
+    padding-top: 30px;
+}
+#taart7:hover {
+    transform: scale(1);
+}
+
+.slideshow-content {
+    display: none;
+}
+.fotoDiv {
+    height: 350px;
+    width: auto;
+    margin: auto auto;
+    padding-bottom: 15px;
+}
+
+#fotoDialog {
+    border-radius: 10px;
+    border-style: inset;
+    border-color: var(--Goud);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 450px;
+    height: 550px;
+    margin: auto auto;
+    background-color: var(--backgroundcolor);
+}
+#fotoDialog[open] {
+    animation: scale-in 500ms;
+}
+#fotoDialog[open] .slideshow-content:first-of-type {
+    display: block;
+  }
+#fotoDialog[closing] {
+    animation: scale-out 450ms;
+}
+#fotoDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--Goud);
+    font-weight: bold;
+    font-size: 1.7rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    left: 5px;
+    right: auto;
+    /* transition: 0.5s; */
+}
+.next {
+    left: auto;
+    right: 5px;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover {
+    scale: 1.1;
+}
+.next:hover {
+    scale: 1.1;
+}
+
+.fade {
+    animation: fade 0.7s;
+}
+.burn {
+    animation: burn 1s;
+}
+.dialog {
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border-style: inset;
+    border-color: var(--Goud);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 375px;
+    height: 115px;
+    bottom: 0;
+    right: 0;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    background-color: var(--backgroundcolor);
+    animation: slide-right 0.5s;
+}
+.dialog[open] {
+    animation: slide-left 0.5s;
+}
+.dialog[closing] {
+    animation: slide-right 0.5s;
+    animation-fill-mode: forwards;
+}
+.dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* .error {
+    padding-left: -11px;
+    padding-right: 1px;
+} */
+.errorbutton {
+    background-color: var(--Goud);
+    color: white;
+    border: solid 3px var(--Goud);
+    padding: 5px 10px;
+    /* center it */
+    margin: auto auto;
+    display: block;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: "Akaya Telivigala", cursive;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 500ms;
+}
+.errorbutton:hover {
+    background-color: white;
+    color: var(--Goud);
+    border: inset 3px var(--Goud);
+}
+#dialog-text-error {
+    display: block;
+    margin: auto auto;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 1.2rem;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+div p span {
+    font-weight: bold;
+    color: var(--Goud);
+}
+
+.button {
+    border: none;
+    background-color: var(--Goud);
+    padding: 9px 15px;
+    color: white;
+    font-family: "Akaya Telivigala", cursive;
+    font-size: 1.2rem;
+    transition: 500ms;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--Goud);
+}
+.button:hover {
+    background-color: white;
+    color: var(--Goud);
+    transition: 500ms;
+    border-style: inset;
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: var(--backgroundcolor);
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.cancel:hover {
+    background-color: var(--backgroundcolor);
+    border: none;
+    cursor: pointer;
+}
+
+/* Cart */
+#overview1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 10%;
+    z-index: 100;
+
+}
+#cart-list {
+    color: var(--Goud);
+}
+.update-quantity {
+    font-family: var(--font1);
+    border: 1px solid var(--Goud);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--tekstkleur);
+    background-color: var(--Goud);
+    font-size: 1.2rem;
+    padding: 3px 7px;
+    border: var(--Goud);
+    border-style: solid;
+    transition: 500ms;
+}
+.update-quantity:hover{
+    background-color: var(--tekstkleur);
+    color: var(--Goud);
+    transition: 500ms;
+    border-style: inset;
+    cursor: pointer;
+}
+
+.remove {
+    font-family: var(--font1);
+    border: 1px solid var(--Goud);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--tekstkleur);
+    background-color: var(--Goud);
+    font-size: 1.2rem;
+    padding: 3px 7px;
+    border: var(--Goud);
+    border-style: solid;
+    transition: 500ms;
+}
+.remove:hover{
+    background-color: red;
+    color: var(--tekstkleur);
+    border-style: inset;
+    border-color: red;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+/*opmaak header*/
+header{
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+}
+header figure:nth-of-type(1) {
+    width: 5%;
+    min-width: 70px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    top: 0;
+    background-color: #222222;
+}
+header figure:nth-of-type(1) img{
+    width: 100%;
+    /* background-color: #222222; */
+}
+
+main figure:nth-of-type(1){
+    background-image: url(../images/pexels_cropped.jpg);
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-position-y: bottom;
+    /* margin-left: 0%; */
+    margin: 0 auto;
+}
+h1{
+    position: absolute;
+    top: 40%;
+    margin-left: 5%;
+    color: var(--backgroundcolor);
+    font-size: 4rem;
+    font-weight: lighter;
+    font-family: 'Dancing Script', cursive;
+}
+main h1 span{
+    font-weight: bold;
+    color: var(--Goud);
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    width: 2%;
+    /* height: 50px; */
+}
+.fixedCart{
+    position: fixed;
+    top: 0;
+    right: 3.5%;
+}
+.logo{
+    position: fixed;
+    top: 10px;
+    width: 110px;
+    height: 110px;
+    left: calc(50% - 55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.background{
+    background-color: var(--backgroundcolor);
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    border-bottom: var(--Goud);
+    border-bottom-style: solid;
+    border-width: 3px;
+  }
+.cart{
+    position: fixed;
+    top: 40px;
+    width: 55px;
+    /* height: 75px; */
+    /* width: 3%; */
+    right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    color: var(--backgroundcolor);
+    border: var(--backgroundcolor);
+    border-style: inset;
+    border-width: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: normal;
+    float: top right;
+    margin-left: 60px;
+    margin-top: -28px;
+    padding-top: -5px;
+    padding-bottom: 4px;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-family: 'Pacifico', cursive;
+    transition: 500ms;
+}
+.cart:hover > .cart-button {
+    background-color: var(--backgroundcolor);
+    color: white;
+    border: var(--Goud);
+    border-style: inset;
+    border-width: 2px;
+    transition: 500ms;
+    cursor: pointer;
+}
+/* header figure:nth-of-type(1) img{
+    width: 100%;
+    margin-top: 50px;
+    min-width: 70px;
+    /* background-color: #222222; */
+  /* } */
+
+/* opmaak main */
+
+main > p >a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--Goud);
+    padding: 10px 20px;
+    transition: 500ms;
+  }
+main > p > a:hover {
+    background-color: white;
+    color: var(--Goud);
+  }
+main > p > a {
+    /* Center the buttons */
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 170px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: var(--Goud);
+    padding: 10px 20px;
+    transition: 500ms;
+  }
+main{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+main img{
+    width: 100%;
+    transition: 500ms;
+}
+
+main img:hover{
+    transform: scale(1.2);
+    transition: 500ms;
+}
+
+.product {
+    transition: 500ms;
+    /* box-shadow: 0 0 10px 0; */
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+    /* width: 100%; */
+}
+.product:hover {
+    /* transform: scale(1.1); */
+    transition: 500ms;
+    box-shadow: 0 0 10px var(--tekstkleur);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.product h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.specials {
+    transition: 500ms;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.specials:hover {
+    transition: 500ms;
+    box-shadow: 0 0 13px var(--Goud);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+.christmas {
+    transition: 500ms;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.christmas:nth-child(even):hover {
+    transition: 500ms;
+    box-shadow: 0 0 13px var(--Groen);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.christmas:nth-child(odd):hover {
+    transition: 500ms;
+    box-shadow: 0 0 13px var(--Rood);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+.christmas select {
+    width: 100%;
+}
+
+#marsContainer {
+    width: 175px;
+}
+
+#vanillagold1 {
+    min-width: 175px;
+}
+#caramelcrunch1 {
+    min-width: 175px;
+}
+#cherrychoc1 {
+    min-width: 175px;
+}
+#berrychristmas1 {
+    min-width: 175px;
+}
+#choccrock1 {
+    min-width: 175px;
+}
+#domeclassic1 {
+    min-width: 180px;
+}
+#domeintense1 {
+    min-width: 180px;
+}
+#domecappuccino1 {
+    min-width: 180px;
+}
+#domeberry1 {
+    min-width: 180px;
+}
+#gintonicfrisco1 {
+    min-width: 275px;
+}
+#yspralinesmix1 {
+    min-width: 275px;
+}
+#glaspistache1 {
+    min-width: 275px;
+}
+#glaschoc1 {
+    min-width: 275px;
+}
+
+/* separate images flavours */
+#vanillagold {
+    height: 115px;
+    width: auto;
+    margin-left: -7px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+#caramelcrunch {
+    height: 130px;
+    width: auto;
+    margin-top: -10px;
+    margin-left: -13px;
+}
+#cherrychoc {
+    height: 120px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -11px;
+}
+#berrychristmas {
+    height: 125px;
+    width: auto;
+    margin-top: -8px;
+    margin-left: -15px;
+}
+#choccrock {
+    height: 125px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -15px;
+}
+#domeclassic {
+    height: 125px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+#domeintense {
+    height: 130px;
+    width: auto;
+    margin-top: -22px;
+    margin-left: -15px;
+}
+#domecappuccino {
+    height: 125px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+#domeberry {
+    height: 125px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -15px;
+}
+#gintonicfrisco {
+    height: 125px;
+    width: auto;
+    margin-top: -13px;
+    margin-left: -15px;
+}
+#yspralinesmix {
+    height: 125px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -15px;
+}
+#glaspistache {
+    height: 125px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+#glaschoc {
+    height: 125px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+
+#vanilla {
+    height: 120px;
+    width: auto;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+#mokka {
+    height: 125px;
+    width: auto;
+    margin-top: 2px;
+}
+#stracciatella {
+    height: 135px;
+    width: auto;
+    margin-top: -4px;
+}
+#milkychoc {
+    height: 115px;
+    width: auto;
+    margin-top: 10px;
+}
+#brazil {
+    height: 105px;
+    width: auto;
+    margin-top: 10px;
+}
+#banana {
+    height: 130px;
+    width: auto;
+    margin-top: -9px;
+}
+#strawberry {
+    height: 130px;
+    width: auto;
+    margin-top: -9px;
+    margin-left: -20px;
+}
+#lemon {
+    height: 110px;
+    width: auto;
+    margin-top: 3px;
+    margin-left: 7.5px;
+}
+#raspberry {
+    height: 125px;
+    width: auto;
+    margin-top: -8px;
+    margin-left: -22.5px;
+}
+#mango {
+    height: 130px;
+    width: auto;
+    margin-top: -6px;
+    margin-left: -7.5px;
+}
+#blueberry {
+    height: 125px;
+    width: auto;
+    margin-top: -6px;
+    margin-left: -35px;
+}
+#pistache {
+    height: 140px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -5px;
+}
+#piemonte {
+    height: 130px;
+    width: auto;
+    margin-top: -10px;
+    margin-left: -22.5px;
+}
+#amarena {
+    height: 130px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -25px;
+}
+#pims {
+    height: 130px;
+    width: auto;
+    margin-top: -15px;
+    margin-left: -25px;
+}
+#mars {
+    height: 95px;
+    width: auto;
+    margin-top: 0px;
+    margin-left: -25px;
+}
+#cuberdon {
+    height: 130px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -20px;
+}
+#speculoos {
+    height: 130px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: -20px;
+}
+.taarten {
+    transition: 500ms;
+    /* box-shadow: 0 0 10px 0; */
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+    margin-top: 1px;
+    width: 225px;
+    min-width: 175px;
+}
+.taarten:hover {
+    /* transform: scale(1.1); */
+    transition: 500ms;
+    box-shadow: 0 0 10px var(--Goud);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+.taarten h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .taarten button {
+    display: flex;
+    justify-content: center;
+} */
+
+
+
+section div div{
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+
+}
+
+section div p{
+    text-align: center;
+    font-size: 1.2rem;
+
+    margin-top: 10px;
+}
+
+section div img{
+    width: 100%;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+section:nth-of-type(1){
+    margin-top: 0px;
+    z-index: 1;
+}
+
+table{
+    color: white
+}
+
+table td{
+    padding: 4px
+}
+
+input[type="number"] {
+    width: 30px;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--Goud);
+    margin-bottom: 75px;
+    margin-top: 100px;
+    font-family: 'Dancing Script', cursive;
+}
+h3{
+    border-bottom: 1px solid var(--Goud);
+    padding-bottom: 20px;
+    color: white;
+    font-size: 1.5rem;
+    color: var(--Goud);
+}
+p{
+    color: white;
+}
+/* .container1 { */
+    /* width: 90%; */
+    /* margin-left: -7.5%; */
+/* } */
+
+/* .container2 {
+    border-radius: 10px;
+    border-style: inset;
+    border-color: var(--tekstkleur);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+} */
+
+.container3 {
+    justify-content: center;
+    /* border-radius: 10px;
+    border-style: inset;
+    border-color: var(--tekstkleur);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 350px;
+    margin: 0 auto; */
+}
+.container3 > div:nth-of-type(1){
+    margin-right: 45px;
+}
+
+/* .container4{
+    justify-content: center; */
+    /* border-radius: 10px;
+    border-style: inset;
+    border-color: var(--Goud);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 1000px;
+    margin: 0 auto; */
+/* } */
+/* .container4 > div{
+    margin-left: 35px;
+    margin-right: 35px;
+} */
+.container4 > div:nth-of-type(2) {
+    min-width: 175px;
+}
+.container5{
+    justify-content: center;
+}
+.container5 > div:nth-of-type(2){
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.add-to-cart{
+    background-color: var(--Goud);
+    color: white;
+    padding: 10px 15px;
+    border: var(--Goud);
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 500ms;
+    float: right;
+}
+.add-to-cart:hover{
+    background-color: white;
+    color: var(--Goud);
+    border-style: inset;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.hoeveelheid{
+    padding: 10px 15px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1rem;
+    /* transition: 500ms; */
+    border-color: var(--Goud);
+    border-style: inset;
+    cursor: pointer;
+}
+.hoeveelheid:focus{
+    outline: none;
+    background-color: lightgray;
+    border-style: inset;
+    cursor: pointer;
+}
+
+
+/* opmaak footer */
+
+footer{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+
+}
+
+footer div{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1rem;
+    
+}
+footer div div{
+    width: 40%;
+    margin: 0 auto;
+    font-family: 'Akaya Telivigala', cursive;
+}
+footer h3{
+    border-bottom: 1px solid var(--Goud);
+    padding-bottom: 20px;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+footer h3:nth-of-type(4){
+    border: none;
+}
+footer p{
+    color: var(--Goud);
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+/* opmaak socials */
+
+body > figure{
+    display: flex;
+    width: 15%;
+    margin: auto auto;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+body > figure img{
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+/* --------------------------- */
+@media screen and (max-width: 766px) {
+    header{
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        font-family: 'Dancing Script', cursive;
+    }
+    header figure:nth-of-type(1) {
+        width: 25%;
+      }
+    header figure:nth-of-type(1) img{
+        width: 100%;
+    }
+    header figure:nth-of-type(2){
+        margin: 0 auto;
+        width: 80%;
+        background-image: url(../images/pexels.jpg);
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-position-y: bottom;
+    }
+    header h1{
+        position: absolute;
+        top: 50%;
+        left: 60px;
+        color: var(--backgroundcolor);
+        font-size: 4rem;
+        font-weight: lighter;
+    
+    }
+    header span{
+        font-weight: bold;
+        color: var(--Goud);
+    }
+    .cart {
+        width: 45px;
+        top: 42px;
+        right: 5.5%;
+    }
+    .container3 > div:nth-of-type(1) {
+       /* background-color: green; */
+       margin-right: 0;
+        margin-left: 0;
+    }
+    /* opmaak main */
+    h2{
+        font-size: 2rem;
+        text-align: center;
+        color: var(--Goud);
+        margin-bottom: 75px;
+        margin-top: 100px;
+        font-family: 'Dancing Script', cursive;
+    }
+    h3{
+        border-bottom: 1px solid var(--Goud);
+        padding-bottom: 20px;
+        font-size: 1.5rem;
+        color: var(--Goud);
+    }
+    p{
+        color: white;
+    }
+    
+    .container4{
+        justify-content: center;
+    }
+    /*opmaak container1 */
+/*set them under each other*/
+.holiday{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+/* opmaak container2 */
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*opmaak container3 */
+/*Pure Pistacchio center */
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*opmaak container4 */
+.container4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*opmaak container5 */
+.container5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* Make the footer responsive */
+footer{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    }
+footer div div{
+    width: 85%;
+    font-family: 'Akaya Telivigala', cursive;
+}
+footer div div h3 {
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+    #yspralines {
+        width: 200px;
+    }
+    #show.button {
+        margin-top: 5px;
+        margin-left: 3px;
+    }
+    #dialogError {
+        margin-right: 3px;
+    }
+    #cart-button {
+        /* margin-top: -28px; */
+        margin-right: 15px;
+    }
+}

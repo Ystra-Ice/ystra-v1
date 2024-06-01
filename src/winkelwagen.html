@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="./images/logo.png" rel="shortcut icon" type="./images/logo.png" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/winkelwagen.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Eczar:wght@800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Winkelmandje</title>
+</head>
+<body>
+  <header>
+    <div class="background">
+    <figure class="logo">
+      <a href="index.html"><img src="images/logo.png" alt=""/></a>
+      <!-- <a class="fixedCart" href="winkelwagen.html"><img src="images/winkelwagen.png" alt=""></a> -->
+    </figure>
+  </div>
+    
+  </header>
+  <div>
+    <ul id="taartenlijst" style="display: none;"></ul>
+  </div>
+  <main>
+    <form
+    id="sheetdb-form"
+  >
+    <h1>Overzicht</h1>
+     <table id="cart-table">
+  <thead>
+    <tr>
+      <th id="categorie">Categorie</th>
+      <th>Smaak</th>
+      <th id="amount">Hoeveelheid</th>
+      <th>Prijs</th>
+      <th>Verwijderen</th>
+    </tr>
+  </thead>
+  <tbody id="cart-table-body"></tbody>
+</table>
+<div id="overzichtBestelling">
+</div>
+
+<h1>Taarten</h1>
+  <table id="taart-table">
+    <thead>
+      <tr>
+        <th id="personen">Personen</th>
+        <th id="type">Type</th>
+        <th id="smaak">Smaak</th>
+        <th id="afwerking">Afwerking</th>
+        <th id="prijs">Prijs</th>
+        <th id="verwijderen">Verwijderen</th>
+      </tr>
+    </thead>
+    <tbody id="taart-table-body">
+
+    </tbody>
+  </table>
+  <div id="overzichtTaart"></div>
+  
+<p id="total-cost" style="display: block; font-size: 1.3rem;"></p>
+<p id="comment" style="display: none; color: red;">* Let op: prijs van taart voor 15+ personen is niet inbegrepen.</p>
+    <div>
+    </div>
+    <h1>Gegevens</h1>
+    <label for="name">Geef hier uw naam en voornaam *</label><br />
+    <input
+      type="text"
+      name="data[Naam]"
+      id="name"
+      placeholder="Naam en voornaam"
+      required
+    /><br /><br />
+
+    <label for="email">Geef hier uw e-mailadres *</label><br />
+    <input
+      type="email"
+      name="data[E-mail]"
+      id="email"
+      placeholder="E-mailadres"
+      required
+    /><br /><br />
+
+    <label for="phone">Geef hier uw telefoonnummer *</label><br />
+    <input
+      type="tel"
+      name="data[Telefoonnummer]"
+      id="phone"
+      placeholder="Telefoonnummer"
+      required
+    /><br /><br>
+    <label for="levering"
+          >Wilt u uw bestelling laten leveren of haalt u het liever zelf
+          op?</label
+        ><br /><br>
+        <input
+          type="radio"
+          name="data[Levering]"
+          value="leveren"
+          id="leveren"
+          onchange="getSelectedOption()"
+        />
+        Levering<br />
+        <input
+          type="radio"
+          name="data[Levering]"
+          value="ophalen"
+          id="ophalen"
+          onchange="getSelectedOption()"
+        />
+        Ophaling<br /><br />
+        <label for="address"
+          >Indien u de bestelling wilt laten leveren, geef hier uw adres.<br>Als u op ophalen klikt, gelieve de datum en het uur op te geven dat u zal langs komen.</label
+        ><br />
+        <input
+          type="text"
+          name="data[Adres/Ophaaluur]"
+          id="address"
+          placeholder="Adres / Ophaaluur"
+          required
+        /><br><br>
+        <label for="opmerking"
+          >Heeft u nog opmerkingen of wilt u nog iets kwijt? Laat het dan zeker
+          hier achter!</label
+        ><br /><br>
+        <textarea
+          name="data[Opmerking]"
+          id="opmerking"
+          cols="40"
+          rows="4"
+          placeholder="Opmerkingen (voedselallergie&euml;n), speciale wensen,..."
+        ></textarea
+        ><br /><br />
+
+        <dialog id="dialogError" class="dialog">
+          <p id="dialog-text-error"></p>
+          <button id="dialog-button-error" type="button" class="errorbutton">OK</button>
+        </dialog>
+  </main>
+
+  <footer>
+    <section>
+      <input
+          type="button"
+          value="Terug"
+          class="button"
+          onclick="window.location.href='./onsaanbod.html'"
+          style="font-size: 1.2rem;"
+        />
+      <input
+          type="submit"
+          name="data[plaatsBestelling]"
+          id="submitbutton"
+          value="Bevestig!"
+          class="button"
+          style="font-size: 1.2rem;"
+        />
+    </section>
+    
+  </footer>
+  <script src="./js/config.js"></script>
+  <script src="./js/overzicht.js"></script>
+</body>
+</html>
